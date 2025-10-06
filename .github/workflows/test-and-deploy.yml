@@ -33,7 +33,7 @@ jobs:
   deploy:
     needs: test
     runs-on: ubuntu-latest
-    if: success() && contains(github.event.head_commit.message, '[deploy]')
+    if: success() 
     steps:
       - name: Trigger Render Deploy Hook
         run: |
