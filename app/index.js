@@ -7,6 +7,10 @@ app.get("/", (_, res) => {
     return res.send("Hello World")
 })
 
+app.get("/chat", (_, res) => {
+    res.send("Welcome To Chat")
+})
+
 app.get("/:id", (req, res) => {
     res.send(`Hello World ${req.params.id}`)
 })

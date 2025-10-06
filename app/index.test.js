@@ -14,4 +14,10 @@ describe("Express App", () => {
         expect(res.statusCode).toBe(200)
         expect(res.text).toBe("Hello World chai")
     })
+
+    it("GET /chat return Welcome To Chat", async () => {
+        const res = await request(app).get("/chat")
+        expect(res.statusCode).toBe(200)
+        expect(res.text).toBe("Welcome To Chat")
+    })
 })
